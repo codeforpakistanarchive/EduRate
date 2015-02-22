@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "School.h"
 
-@interface RateSchoolViewController : UIViewController
+@interface RateSchoolViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) School *selectedSchool;
 @property (nonatomic, strong) NSManagedObjectContext *moc;
+@property (nonatomic, weak) IBOutlet UILabel *lblTitle;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableviewfacilities;
+
+- (IBAction)btnMenuPressed:(id)sender;
+- (IBAction)btnBackPressed:(id)sender;
 
 @end

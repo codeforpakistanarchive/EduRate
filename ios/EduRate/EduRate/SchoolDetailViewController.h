@@ -27,6 +27,16 @@ typedef enum : NSUInteger {
 @property (nonatomic, weak) IBOutlet UIButton *btnRatingBetter;
 @property (nonatomic, weak) IBOutlet UIButton *btnRatingExcellent;
 
+@property (nonatomic, weak) IBOutlet UILabel *lblSchoolTitle;
+@property (nonatomic, weak) IBOutlet UILabel *lblSchoolCity;
+@property (nonatomic, weak) IBOutlet UILabel *lblSchoolType;
+@property (nonatomic, weak) IBOutlet UILabel *lblSchoolEduLevel;
+@property (nonatomic, weak) IBOutlet UILabel *lblSchoolAbout;
+
+@property (nonatomic, strong) NSManagedObjectContext *moc;;
+
 - (IBAction)btnRatePressed:(id)sender;
+- (IBAction)btnMenuPressed:(id)sender;
+- (IBAction)btnBackPressed:(id)sender;
 
 @end

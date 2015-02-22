@@ -21,6 +21,8 @@
 @property (nonatomic, retain) NSSet *failityRatings;
 
 + (NSArray*)getAllSchoolsMOC:(NSManagedObjectContext*)moc;
++ (NSArray*)getAllSchoolsForCity:(City*)city MOC:(NSManagedObjectContext*)moc;
+
 + (School*)createObjectWithName:(NSString*)nameIn city:(City*)cityIn moc:(NSManagedObjectContext*)moc;
 
 @end

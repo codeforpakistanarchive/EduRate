@@ -27,6 +27,16 @@
 		C54C4C8D1A98D77200DE284C /* RateSchoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C8C1A98D77200DE284C /* RateSchoolViewController.m */; };
 		C54C4C911A98D87000DE284C /* UITableViewCellRate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C901A98D87000DE284C /* UITableViewCellRate.m */; };
 		C54C4C941A98E94300DE284C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C931A98E94300DE284C /* MenuViewController.m */; };
+		C595FFA61A99AD0800CA148B /* FindSchoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C595FFA51A99AD0800CA148B /* FindSchoolViewController.m */; };
+		C595FFA91A99B44900CA148B /* UITableViewCellFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = C595FFA81A99B44900CA148B /* UITableViewCellFilter.m */; };
+		C595FFAC1A99B73F00CA148B /* FilteredSchoolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C595FFAB1A99B73F00CA148B /* FilteredSchoolsViewController.m */; };
+		C5F241501A99C070001865F7 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5F2414C1A99C070001865F7 /* MyriadPro-Bold.otf */; };
+		C5F241511A99C070001865F7 /* MyriadPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5F2414D1A99C070001865F7 /* MyriadPro-Light.otf */; };
+		C5F241521A99C070001865F7 /* MyriadPro-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5F2414E1A99C070001865F7 /* MyriadPro-LightIt.otf */; };
+		C5F241531A99C070001865F7 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5F2414F1A99C070001865F7 /* MyriadPro-Regular.otf */; };
+		C5F241561A99C5A6001865F7 /* UITableViewCellCity.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F241551A99C5A6001865F7 /* UITableViewCellCity.m */; };
+		C5F241591A99C872001865F7 /* UITableViewCellSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F241581A99C872001865F7 /* UITableViewCellSchool.m */; };
+		C5F2415C1A99E5D2001865F7 /* UITableViewCellRatedSchools.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F2415B1A99E5D2001865F7 /* UITableViewCellRatedSchools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +88,22 @@
 		C54C4C901A98D87000DE284C /* UITableViewCellRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellRate.m; sourceTree = "<group>"; };
 		C54C4C921A98E94300DE284C /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		C54C4C931A98E94300DE284C /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		C595FFA41A99AD0800CA148B /* FindSchoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSchoolViewController.h; sourceTree = "<group>"; };
+		C595FFA51A99AD0800CA148B /* FindSchoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSchoolViewController.m; sourceTree = "<group>"; };
+		C595FFA71A99B44900CA148B /* UITableViewCellFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellFilter.h; sourceTree = "<group>"; };
+		C595FFA81A99B44900CA148B /* UITableViewCellFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellFilter.m; sourceTree = "<group>"; };
+		C595FFAA1A99B73F00CA148B /* FilteredSchoolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteredSchoolsViewController.h; sourceTree = "<group>"; };
+		C595FFAB1A99B73F00CA148B /* FilteredSchoolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteredSchoolsViewController.m; sourceTree = "<group>"; };
+		C5F2414C1A99C070001865F7 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
+		C5F2414D1A99C070001865F7 /* MyriadPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Light.otf"; sourceTree = "<group>"; };
+		C5F2414E1A99C070001865F7 /* MyriadPro-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-LightIt.otf"; sourceTree = "<group>"; };
+		C5F2414F1A99C070001865F7 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
+		C5F241541A99C5A6001865F7 /* UITableViewCellCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellCity.h; sourceTree = "<group>"; };
+		C5F241551A99C5A6001865F7 /* UITableViewCellCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellCity.m; sourceTree = "<group>"; };
+		C5F241571A99C872001865F7 /* UITableViewCellSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellSchool.h; sourceTree = "<group>"; };
+		C5F241581A99C872001865F7 /* UITableViewCellSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellSchool.m; sourceTree = "<group>"; };
+		C5F2415A1A99E5D2001865F7 /* UITableViewCellRatedSchools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellRatedSchools.h; sourceTree = "<group>"; };
+		C5F2415B1A99E5D2001865F7 /* UITableViewCellRatedSchools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellRatedSchools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +168,10 @@
 				C54C4C8C1A98D77200DE284C /* RateSchoolViewController.m */,
 				C54C4C881A98CC6900DE284C /* UIBaseViewController.h */,
 				C54C4C891A98CC6900DE284C /* UIBaseViewController.m */,
+				C595FFA41A99AD0800CA148B /* FindSchoolViewController.h */,
+				C595FFA51A99AD0800CA148B /* FindSchoolViewController.m */,
+				C595FFAA1A99B73F00CA148B /* FilteredSchoolsViewController.h */,
+				C595FFAB1A99B73F00CA148B /* FilteredSchoolsViewController.m */,
 			);
 			path = EduRate;
 			sourceTree = "<group>";
@@ -149,6 +179,7 @@
 		C54C4C2A1A98536B00DE284C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C595FFAD1A99BBD700CA148B /* Fonts */,
 				C54C4C2B1A98536B00DE284C /* Info.plist */,
 				C54C4C2C1A98536B00DE284C /* main.m */,
 			);
@@ -202,8 +233,27 @@
 			children = (
 				C54C4C8F1A98D87000DE284C /* UITableViewCellRate.h */,
 				C54C4C901A98D87000DE284C /* UITableViewCellRate.m */,
+				C595FFA71A99B44900CA148B /* UITableViewCellFilter.h */,
+				C595FFA81A99B44900CA148B /* UITableViewCellFilter.m */,
+				C5F241541A99C5A6001865F7 /* UITableViewCellCity.h */,
+				C5F241551A99C5A6001865F7 /* UITableViewCellCity.m */,
+				C5F241571A99C872001865F7 /* UITableViewCellSchool.h */,
+				C5F241581A99C872001865F7 /* UITableViewCellSchool.m */,
+				C5F2415A1A99E5D2001865F7 /* UITableViewCellRatedSchools.h */,
+				C5F2415B1A99E5D2001865F7 /* UITableViewCellRatedSchools.m */,
 			);
 			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		C595FFAD1A99BBD700CA148B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C5F2414C1A99C070001865F7 /* MyriadPro-Bold.otf */,
+				C5F2414D1A99C070001865F7 /* MyriadPro-Light.otf */,
+				C5F2414E1A99C070001865F7 /* MyriadPro-LightIt.otf */,
+				C5F2414F1A99C070001865F7 /* MyriadPro-Regular.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C54C4C391A98536B00DE284C /* Main.storyboard in Resources */,
+				C5F241521A99C070001865F7 /* MyriadPro-LightIt.otf in Resources */,
+				C5F241511A99C070001865F7 /* MyriadPro-Light.otf in Resources */,
+				C5F241531A99C070001865F7 /* MyriadPro-Regular.otf in Resources */,
 				C54C4C3E1A98536B00DE284C /* LaunchScreen.xib in Resources */,
+				C5F241501A99C070001865F7 /* MyriadPro-Bold.otf in Resources */,
 				C54C4C3B1A98536B00DE284C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,16 +366,22 @@
 				C54C4C941A98E94300DE284C /* MenuViewController.m in Sources */,
 				C54C4C7A1A98767E00DE284C /* Facility.m in Sources */,
 				C54C4C8D1A98D77200DE284C /* RateSchoolViewController.m in Sources */,
+				C595FFA61A99AD0800CA148B /* FindSchoolViewController.m in Sources */,
 				C54C4C711A98767D00DE284C /* School.m in Sources */,
+				C5F2415C1A99E5D2001865F7 /* UITableViewCellRatedSchools.m in Sources */,
 				C54C4C741A98767E00DE284C /* City.m in Sources */,
 				C54C4C2D1A98536B00DE284C /* main.m in Sources */,
 				C54C4C8A1A98CC6900DE284C /* UIBaseViewController.m in Sources */,
 				C54C4C911A98D87000DE284C /* UITableViewCellRate.m in Sources */,
 				C54C4C7D1A98780F00DE284C /* SelectSchoolViewController.m in Sources */,
+				C595FFA91A99B44900CA148B /* UITableViewCellFilter.m in Sources */,
 				C54C4C871A98CB8100DE284C /* SelectSchoolTypeViewController.m in Sources */,
 				C54C4C331A98536B00DE284C /* EduRate.xcdatamodeld in Sources */,
 				C54C4C841A98967500DE284C /* DataHelper.m in Sources */,
 				C54C4C551A986CAF00DE284C /* SelectCityViewController.m in Sources */,
+				C5F241591A99C872001865F7 /* UITableViewCellSchool.m in Sources */,
+				C5F241561A99C5A6001865F7 /* UITableViewCellCity.m in Sources */,
+				C595FFAC1A99B73F00CA148B /* FilteredSchoolsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,13 @@
 
 #import "SelectSchoolViewController.h"
 #import "SchoolDetailViewController.h"
+#import "UITableViewCellSchool.h"
 #import "School.h"
 
 @interface SelectSchoolViewController ()
 
 @property (nonatomic, strong) NSArray *allSchoolsForCity;
+@property (nonatomic, strong) NSArray *filteredSchoolsForCity;
 
 @end
 
@@ -21,11 +23,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.allSchoolsForCity = [self.selectedCity.schools allObjects];
+    self.lblTitle.text = self.selectedCity.name;
     
-    [self.tableViewSchools registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];
+    self.allSchoolsForCity = [self.selectedCity.schools allObjects];
+    self.filteredSchoolsForCity = [self.allSchoolsForCity copy];
+    
+    //[self.tableViewSchools registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOccured:)];
+    tapGesture.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGesture];
     
     // Do any additional setup after loading the view.
+}
+
+- (void)tapOccured:(UITapGestureRecognizer*)gesture
+{
+    [self.searchSchool resignFirstResponder];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if (searchBar.text.length > 0) {
+        self.filteredSchoolsForCity = [self.allSchoolsForCity filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name contains[cd] %@", searchBar.text]];
+    }
+    else {
+        self.filteredSchoolsForCity = self.allSchoolsForCity;
+    }
+    
+    [self.tableViewSchools reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,11 +59,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnBackPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btnMenuPressed:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark UITableView Delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.allSchoolsForCity count];
+    return [self.filteredSchoolsForCity count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -47,21 +83,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"Identifier";
+    static NSString *simpleTableIdentifier = @"identifier";
     
-    School *school = [self.allSchoolsForCity objectAtIndex:indexPath.row];
+    School *school = [self.filteredSchoolsForCity objectAtIndex:indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    UITableViewCellSchool *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    cell.textLabel.text = school.name;
+    cell.lblTitle.text = school.name;
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 45;
+    return 30;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -71,9 +107,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    School *school = [self.allSchoolsForCity objectAtIndex:indexPath.row];
+    School *school = [self.filteredSchoolsForCity objectAtIndex:indexPath.row];
     
     SchoolDetailViewController *schoolDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SchoolDetailViewController"];
+    schoolDetailViewController.moc = self.moc;
     schoolDetailViewController.selectedSchool = school;
     [self.navigationController pushViewController:schoolDetailViewController animated:YES];
 }

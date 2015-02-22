@@ -25,17 +25,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnBackPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btnMenuPressed:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (IBAction)btnPublicPressed:(id)sender
 {
     SelectCityViewController *selectCityViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectCityViewController"];
     selectCityViewController.moc = self.moc;
-    selectCityViewController.title = @"Public";
+    selectCityViewController.isFindASchool = NO;
+    selectCityViewController.titleStr = @"Public";
     [self.navigationController pushViewController:selectCityViewController animated:YES];
 }
 
 - (IBAction)btnPrivatePressed:(id)sender
 {
-    
+    SelectCityViewController *selectCityViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectCityViewController"];
+    selectCityViewController.moc = self.moc;
+    selectCityViewController.isFindASchool = NO;
+    selectCityViewController.lblTitle.text = @"Private";
+    [self.navigationController pushViewController:selectCityViewController animated:YES];
 }
 
 /*

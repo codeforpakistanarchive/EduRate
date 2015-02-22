@@ -8,11 +8,14 @@
 
 #import "SelectCityViewController.h"
 #import "SelectSchoolViewController.h"
+#import "FindSchoolViewController.h"
+#import "UITableViewCellCity.h"
 #import "City.h"
 
 @interface SelectCityViewController ()
 
 @property (nonatomic, strong) NSArray *allCities;
+@property (nonatomic, strong) NSArray *filteredCities;
 
 @end
 
@@ -22,12 +25,35 @@
     [super viewDidLoad];
 
     self.allCities = [City getAllCitiesMOC:self.moc];
+    self.filteredCities = [self.allCities copy];
     
-    [self.tableViewCities registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];
+    self.lblTitle.text = self.titleStr;
+    //[self.tableViewCities registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
     
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOccured:)];
+    tapGesture.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGesture];
+    
     // Do any additional setup after loading the view.
+}
+
+- (void)tapOccured:(UITapGestureRecognizer*)gesture
+{
+    [self.searchCity resignFirstResponder];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if (self.searchCity.text.length > 0) {
+        self.filteredCities = [self.allCities filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name contains[cd] %@", self.searchCity.text]];
+    }
+    else {
+        self.filteredCities = self.allCities;
+    }
+    
+    [self.tableViewCities reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,11 +61,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)btnBackPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btnMenuPressed:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark UITableView Delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.allCities count];
+    return [self.filteredCities count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -49,14 +86,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"Identifier";
+    static NSString *simpleTableIdentifier = @"identifier";
     
-    City *city = [self.allCities objectAtIndex:indexPath.row];
+    City *city = [self.filteredCities objectAtIndex:indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    UITableViewCellCity *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    cell.textLabel.text = city.name;
+    cell.lblTitle.text = city.name;
     
     return cell;
 }
@@ -64,7 +101,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 45;
+    return 30;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -74,11 +111,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    City *city = [self.allCities objectAtIndex:indexPath.row];
+    City *city = [self.filteredCities objectAtIndex:indexPath.row];
     
-    SelectSchoolViewController *selectSchoolViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectSchoolViewController"];
-    selectSchoolViewController.selectedCity = city;
-    [self.navigationController pushViewController:selectSchoolViewController animated:YES];
+    if (self.isFindASchool) {
+        FindSchoolViewController *findSchoolViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FindSchoolViewController"];
+        findSchoolViewController.moc = self.moc;
+        findSchoolViewController.selectedCity = city;
+        [self.navigationController pushViewController:findSchoolViewController animated:YES];
+    }
+    else {
+        SelectSchoolViewController *selectSchoolViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectSchoolViewController"];
+        selectSchoolViewController.moc = self.moc;
+        selectSchoolViewController.selectedCity = city;
+        [self.navigationController pushViewController:selectSchoolViewController animated:YES];
+    }
 }
 
 /*

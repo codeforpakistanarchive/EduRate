@@ -7,6 +7,9 @@
 //
 
 #import "MenuViewController.h"
+#import "SelectSchoolTypeViewController.h"
+#import "FindSchoolViewController.h"
+#import "SelectCityViewController.h"
 
 @interface MenuViewController ()
 
@@ -22,6 +25,32 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnRateASchool:(id)sender
+{
+    SelectSchoolTypeViewController *selectSchoolTypeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectSchoolTypeViewController"];
+    selectSchoolTypeViewController.moc = self.moc;
+    [self.navigationController pushViewController:selectSchoolTypeViewController animated:YES];
+}
+
+- (IBAction)btnFindASchool:(id)sender
+{
+    SelectCityViewController *selectCityViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectCityViewController"];
+    selectCityViewController.moc = self.moc;
+    selectCityViewController.isFindASchool = YES;
+    selectCityViewController.titleStr = @"Select a city";
+    [self.navigationController pushViewController:selectCityViewController animated:YES];
+}
+
+- (IBAction)btnBackPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btnMenuPressed:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 /*

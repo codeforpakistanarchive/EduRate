@@ -8,6 +8,7 @@
 
 #import "SchoolDetailViewController.h"
 #import "RateSchoolViewController.h"
+#import "City.h"
 
 @interface SchoolDetailViewController ()
 
@@ -19,6 +20,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
+    
+    self.lblSchoolTitle.text = self.selectedSchool.name;
+    self.lblSchoolCity.text = self.selectedSchool.city.name;
     // Do any additional setup after loading the view.
 }
 
@@ -30,8 +34,19 @@
 - (IBAction)btnRatePressed:(id)sender
 {
     RateSchoolViewController *rateSchoolViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RateSchoolViewController"];
+    rateSchoolViewController.moc = self.moc;
     rateSchoolViewController.selectedSchool = self.selectedSchool;
     [self.navigationController pushViewController:rateSchoolViewController animated:YES];
+}
+
+- (IBAction)btnBackPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btnMenuPressed:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 /*

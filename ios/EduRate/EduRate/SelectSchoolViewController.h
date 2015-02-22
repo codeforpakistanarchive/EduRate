@@ -10,11 +10,16 @@
 #import "UIBaseViewController.h"
 #import "City.h"
 
-@interface SelectSchoolViewController : UIBaseViewController
+@interface SelectSchoolViewController : UIBaseViewController <UISearchBarDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableViewSchools;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchSchool;
+@property (nonatomic, weak) IBOutlet UILabel *lblTitle;
+
 @property (nonatomic, strong) NSManagedObjectContext *moc;
 @property (nonatomic, strong) City *selectedCity;
+
+- (IBAction)btnMenuPressed:(id)sender;
+- (IBAction)btnBackPressed:(id)sender;
 
 @end

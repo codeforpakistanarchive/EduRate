@@ -42,5 +42,19 @@
     return allObjects;
 }
 
++ (NSArray*)getAllSchoolsForCity:(City*)city MOC:(NSManagedObjectContext*)moc
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"School"
+                                              inManagedObjectContext:moc];
+    
+    [fetchRequest setEntity:entity];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"city == %@", city]];
+    
+    NSArray *allObjects = [moc executeFetchRequest:fetchRequest error:nil];
+    
+    return allObjects;
+}
+
 
 @end

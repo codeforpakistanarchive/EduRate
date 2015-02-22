@@ -26,6 +26,8 @@
     self.allSchoolFacilitiesRatings = [NSMutableArray new];
     self.allSchoolFacilities = [Facility getAllFacilitiesMOC:self.moc];
     
+    self.lblTitle.text = self.selectedSchool.name;
+    
     for (Facility *facility in self.allSchoolFacilities) {
         NSArray *facilityRatings = [Facility_Rate getAllFacilityRateForSchool:self.selectedSchool facility:facility MOC:self.moc];
         //NSNumber *rating = [facilityRatings valueForKeyPath:@"@sum.rating"];
@@ -33,13 +35,23 @@
         
     }
     
-    [self.tableviewfacilities registerNib:[UINib nibWithNibName:@"UITableViewCellRate" bundle:nil] forCellReuseIdentifier:@"identifier"];
+    //[self.tableviewfacilities registerNib:[UINib nibWithNibName:@"RateSchoolViewController" bundle:nil] forCellReuseIdentifier:@"identifier"];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnBackPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btnMenuPressed:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark UITableView Delegate
@@ -63,7 +75,7 @@
     UITableViewCellRate *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.lblTitle.text = facility.name;
+    cell.lblTitle.text = [NSString stringWithFormat:@"%d. %@", indexPath.row+1, facility.name];
     cell.lblRating.text = [NSString stringWithFormat:@"%@Reviews", [self.allSchoolFacilitiesRatings objectAtIndex:indexPath.row]];
     
     return cell;
@@ -71,7 +83,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 66;
+    return 90;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

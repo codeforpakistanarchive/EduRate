@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C54C4C2D1A98536B00DE284C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C2C1A98536B00DE284C /* main.m */; };
+		C54C4C301A98536B00DE284C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C2F1A98536B00DE284C /* AppDelegate.m */; };
+		C54C4C331A98536B00DE284C /* EduRate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C311A98536B00DE284C /* EduRate.xcdatamodeld */; };
+		C54C4C391A98536B00DE284C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54C4C371A98536B00DE284C /* Main.storyboard */; };
+		C54C4C3B1A98536B00DE284C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54C4C3A1A98536B00DE284C /* Images.xcassets */; };
+		C54C4C3E1A98536B00DE284C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C54C4C3C1A98536B00DE284C /* LaunchScreen.xib */; };
+		C54C4C4A1A98536C00DE284C /* EduRateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C491A98536C00DE284C /* EduRateTests.m */; };
+		C54C4C551A986CAF00DE284C /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C541A986CAF00DE284C /* SelectCityViewController.m */; };
+		C54C4C711A98767D00DE284C /* School.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C701A98767D00DE284C /* School.m */; };
+		C54C4C741A98767E00DE284C /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C731A98767E00DE284C /* City.m */; };
+		C54C4C771A98767E00DE284C /* Facility_Rate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C761A98767E00DE284C /* Facility_Rate.m */; };
+		C54C4C7A1A98767E00DE284C /* Facility.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C791A98767E00DE284C /* Facility.m */; };
+		C54C4C7D1A98780F00DE284C /* SelectSchoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C7C1A98780F00DE284C /* SelectSchoolViewController.m */; };
+		C54C4C801A988D6D00DE284C /* SchoolDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C7F1A988D6D00DE284C /* SchoolDetailViewController.m */; };
+		C54C4C841A98967500DE284C /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C831A98967500DE284C /* DataHelper.m */; };
+		C54C4C871A98CB8100DE284C /* SelectSchoolTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C861A98CB8100DE284C /* SelectSchoolTypeViewController.m */; };
+		C54C4C8A1A98CC6900DE284C /* UIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C891A98CC6900DE284C /* UIBaseViewController.m */; };
+		C54C4C8D1A98D77200DE284C /* RateSchoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C8C1A98D77200DE284C /* RateSchoolViewController.m */; };
+		C54C4C911A98D87000DE284C /* UITableViewCellRate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C901A98D87000DE284C /* UITableViewCellRate.m */; };
+		C54C4C941A98E94300DE284C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C4C931A98E94300DE284C /* MenuViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C54C4C441A98536C00DE284C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54C4C1F1A98536B00DE284C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C54C4C261A98536B00DE284C;
+			remoteInfo = EduRate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C54C4C271A98536B00DE284C /* EduRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54C4C2B1A98536B00DE284C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C54C4C2C1A98536B00DE284C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C54C4C2E1A98536B00DE284C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C54C4C2F1A98536B00DE284C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C54C4C321A98536B00DE284C /* EduRate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EduRate.xcdatamodel; sourceTree = "<group>"; };
+		C54C4C381A98536B00DE284C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C54C4C3A1A98536B00DE284C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C54C4C3D1A98536B00DE284C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C54C4C431A98536C00DE284C /* EduRateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EduRateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54C4C481A98536C00DE284C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C54C4C491A98536C00DE284C /* EduRateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EduRateTests.m; sourceTree = "<group>"; };
+		C54C4C531A986CAF00DE284C /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
+		C54C4C541A986CAF00DE284C /* SelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityViewController.m; sourceTree = "<group>"; };
+		C54C4C6F1A98767D00DE284C /* School.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = School.h; sourceTree = "<group>"; };
+		C54C4C701A98767D00DE284C /* School.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = School.m; sourceTree = "<group>"; };
+		C54C4C721A98767E00DE284C /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		C54C4C731A98767E00DE284C /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		C54C4C751A98767E00DE284C /* Facility_Rate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facility_Rate.h; sourceTree = "<group>"; };
+		C54C4C761A98767E00DE284C /* Facility_Rate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facility_Rate.m; sourceTree = "<group>"; };
+		C54C4C781A98767E00DE284C /* Facility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facility.h; sourceTree = "<group>"; };
+		C54C4C791A98767E00DE284C /* Facility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facility.m; sourceTree = "<group>"; };
+		C54C4C7B1A98780F00DE284C /* SelectSchoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSchoolViewController.h; sourceTree = "<group>"; };
+		C54C4C7C1A98780F00DE284C /* SelectSchoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSchoolViewController.m; sourceTree = "<group>"; };
+		C54C4C7E1A988D6D00DE284C /* SchoolDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolDetailViewController.h; sourceTree = "<group>"; };
+		C54C4C7F1A988D6D00DE284C /* SchoolDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolDetailViewController.m; sourceTree = "<group>"; };
+		C54C4C821A98967500DE284C /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHelper.h; sourceTree = "<group>"; };
+		C54C4C831A98967500DE284C /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHelper.m; sourceTree = "<group>"; };
+		C54C4C851A98CB8100DE284C /* SelectSchoolTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSchoolTypeViewController.h; sourceTree = "<group>"; };
+		C54C4C861A98CB8100DE284C /* SelectSchoolTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSchoolTypeViewController.m; sourceTree = "<group>"; };
+		C54C4C881A98CC6900DE284C /* UIBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBaseViewController.h; sourceTree = "<group>"; };
+		C54C4C891A98CC6900DE284C /* UIBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBaseViewController.m; sourceTree = "<group>"; };
+		C54C4C8B1A98D77200DE284C /* RateSchoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateSchoolViewController.h; sourceTree = "<group>"; };
+		C54C4C8C1A98D77200DE284C /* RateSchoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateSchoolViewController.m; sourceTree = "<group>"; };
+		C54C4C8F1A98D87000DE284C /* UITableViewCellRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellRate.h; sourceTree = "<group>"; };
+		C54C4C901A98D87000DE284C /* UITableViewCellRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellRate.m; sourceTree = "<group>"; };
+		C54C4C921A98E94300DE284C /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		C54C4C931A98E94300DE284C /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C54C4C241A98536B00DE284C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54C4C401A98536C00DE284C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C54C4C1E1A98536B00DE284C = {
+			isa = PBXGroup;
+			children = (
+				C54C4C291A98536B00DE284C /* EduRate */,
+				C54C4C461A98536C00DE284C /* EduRateTests */,
+				C54C4C281A98536B00DE284C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C54C4C281A98536B00DE284C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C54C4C271A98536B00DE284C /* EduRate.app */,
+				C54C4C431A98536C00DE284C /* EduRateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C54C4C291A98536B00DE284C /* EduRate */ = {
+			isa = PBXGroup;
+			children = (
+				C54C4C8E1A98D85800DE284C /* Custom Cell */,
+				C54C4C811A98966000DE284C /* Helper */,
+				C54C4C561A9875F600DE284C /* Model */,
+				C54C4C2E1A98536B00DE284C /* AppDelegate.h */,
+				C54C4C2F1A98536B00DE284C /* AppDelegate.m */,
+				C54C4C371A98536B00DE284C /* Main.storyboard */,
+				C54C4C3A1A98536B00DE284C /* Images.xcassets */,
+				C54C4C3C1A98536B00DE284C /* LaunchScreen.xib */,
+				C54C4C2A1A98536B00DE284C /* Supporting Files */,
+				C54C4C921A98E94300DE284C /* MenuViewController.h */,
+				C54C4C931A98E94300DE284C /* MenuViewController.m */,
+				C54C4C851A98CB8100DE284C /* SelectSchoolTypeViewController.h */,
+				C54C4C861A98CB8100DE284C /* SelectSchoolTypeViewController.m */,
+				C54C4C531A986CAF00DE284C /* SelectCityViewController.h */,
+				C54C4C541A986CAF00DE284C /* SelectCityViewController.m */,
+				C54C4C7B1A98780F00DE284C /* SelectSchoolViewController.h */,
+				C54C4C7C1A98780F00DE284C /* SelectSchoolViewController.m */,
+				C54C4C7E1A988D6D00DE284C /* SchoolDetailViewController.h */,
+				C54C4C7F1A988D6D00DE284C /* SchoolDetailViewController.m */,
+				C54C4C8B1A98D77200DE284C /* RateSchoolViewController.h */,
+				C54C4C8C1A98D77200DE284C /* RateSchoolViewController.m */,
+				C54C4C881A98CC6900DE284C /* UIBaseViewController.h */,
+				C54C4C891A98CC6900DE284C /* UIBaseViewController.m */,
+			);
+			path = EduRate;
+			sourceTree = "<group>";
+		};
+		C54C4C2A1A98536B00DE284C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C54C4C2B1A98536B00DE284C /* Info.plist */,
+				C54C4C2C1A98536B00DE284C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C54C4C461A98536C00DE284C /* EduRateTests */ = {
+			isa = PBXGroup;
+			children = (
+				C54C4C491A98536C00DE284C /* EduRateTests.m */,
+				C54C4C471A98536C00DE284C /* Supporting Files */,
+			);
+			path = EduRateTests;
+			sourceTree = "<group>";
+		};
+		C54C4C471A98536C00DE284C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C54C4C481A98536C00DE284C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C54C4C561A9875F600DE284C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C54C4C311A98536B00DE284C /* EduRate.xcdatamodeld */,
+				C54C4C781A98767E00DE284C /* Facility.h */,
+				C54C4C791A98767E00DE284C /* Facility.m */,
+				C54C4C751A98767E00DE284C /* Facility_Rate.h */,
+				C54C4C761A98767E00DE284C /* Facility_Rate.m */,
+				C54C4C721A98767E00DE284C /* City.h */,
+				C54C4C731A98767E00DE284C /* City.m */,
+				C54C4C6F1A98767D00DE284C /* School.h */,
+				C54C4C701A98767D00DE284C /* School.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C54C4C811A98966000DE284C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C54C4C821A98967500DE284C /* DataHelper.h */,
+				C54C4C831A98967500DE284C /* DataHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		C54C4C8E1A98D85800DE284C /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C54C4C8F1A98D87000DE284C /* UITableViewCellRate.h */,
+				C54C4C901A98D87000DE284C /* UITableViewCellRate.m */,
+			);
+			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C54C4C261A98536B00DE284C /* EduRate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C54C4C4D1A98536C00DE284C /* Build configuration list for PBXNativeTarget "EduRate" */;
+			buildPhases = (
+				C54C4C231A98536B00DE284C /* Sources */,
+				C54C4C241A98536B00DE284C /* Frameworks */,
+				C54C4C251A98536B00DE284C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EduRate;
+			productName = EduRate;
+			productReference = C54C4C271A98536B00DE284C /* EduRate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C54C4C421A98536C00DE284C /* EduRateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C54C4C501A98536C00DE284C /* Build configuration list for PBXNativeTarget "EduRateTests" */;
+			buildPhases = (
+				C54C4C3F1A98536C00DE284C /* Sources */,
+				C54C4C401A98536C00DE284C /* Frameworks */,
+				C54C4C411A98536C00DE284C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C54C4C451A98536C00DE284C /* PBXTargetDependency */,
+			);
+			name = EduRateTests;
+			productName = EduRateTests;
+			productReference = C54C4C431A98536C00DE284C /* EduRateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C54C4C1F1A98536B00DE284C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Muhammad Ubaid";
+				TargetAttributes = {
+					C54C4C261A98536B00DE284C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C54C4C421A98536C00DE284C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = C54C4C261A98536B00DE284C;
+					};
+				};
+			};
+			buildConfigurationList = C54C4C221A98536B00DE284C /* Build configuration list for PBXProject "EduRate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C54C4C1E1A98536B00DE284C;
+			productRefGroup = C54C4C281A98536B00DE284C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C54C4C261A98536B00DE284C /* EduRate */,
+				C54C4C421A98536C00DE284C /* EduRateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C54C4C251A98536B00DE284C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C54C4C391A98536B00DE284C /* Main.storyboard in Resources */,
+				C54C4C3E1A98536B00DE284C /* LaunchScreen.xib in Resources */,
+				C54C4C3B1A98536B00DE284C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54C4C411A98536C00DE284C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C54C4C231A98536B00DE284C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C54C4C771A98767E00DE284C /* Facility_Rate.m in Sources */,
+				C54C4C801A988D6D00DE284C /* SchoolDetailViewController.m in Sources */,
+				C54C4C301A98536B00DE284C /* AppDelegate.m in Sources */,
+				C54C4C941A98E94300DE284C /* MenuViewController.m in Sources */,
+				C54C4C7A1A98767E00DE284C /* Facility.m in Sources */,
+				C54C4C8D1A98D77200DE284C /* RateSchoolViewController.m in Sources */,
+				C54C4C711A98767D00DE284C /* School.m in Sources */,
+				C54C4C741A98767E00DE284C /* City.m in Sources */,
+				C54C4C2D1A98536B00DE284C /* main.m in Sources */,
+				C54C4C8A1A98CC6900DE284C /* UIBaseViewController.m in Sources */,
+				C54C4C911A98D87000DE284C /* UITableViewCellRate.m in Sources */,
+				C54C4C7D1A98780F00DE284C /* SelectSchoolViewController.m in Sources */,
+				C54C4C871A98CB8100DE284C /* SelectSchoolTypeViewController.m in Sources */,
+				C54C4C331A98536B00DE284C /* EduRate.xcdatamodeld in Sources */,
+				C54C4C841A98967500DE284C /* DataHelper.m in Sources */,
+				C54C4C551A986CAF00DE284C /* SelectCityViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54C4C3F1A98536C00DE284C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C54C4C4A1A98536C00DE284C /* EduRateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C54C4C451A98536C00DE284C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C54C4C261A98536B00DE284C /* EduRate */;
+			targetProxy = C54C4C441A98536C00DE284C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C54C4C371A98536B00DE284C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C54C4C381A98536B00DE284C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C54C4C3C1A98536B00DE284C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C54C4C3D1A98536B00DE284C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C54C4C4B1A98536C00DE284C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C54C4C4C1A98536C00DE284C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C54C4C4E1A98536C00DE284C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EduRate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C54C4C4F1A98536C00DE284C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EduRate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C54C4C511A98536C00DE284C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EduRateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EduRate.app/EduRate";
+			};
+			name = Debug;
+		};
+		C54C4C521A98536C00DE284C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EduRateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EduRate.app/EduRate";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C54C4C221A98536B00DE284C /* Build configuration list for PBXProject "EduRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C54C4C4B1A98536C00DE284C /* Debug */,
+				C54C4C4C1A98536C00DE284C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C54C4C4D1A98536C00DE284C /* Build configuration list for PBXNativeTarget "EduRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C54C4C4E1A98536C00DE284C /* Debug */,
+				C54C4C4F1A98536C00DE284C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C54C4C501A98536C00DE284C /* Build configuration list for PBXNativeTarget "EduRateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C54C4C511A98536C00DE284C /* Debug */,
+				C54C4C521A98536C00DE284C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C54C4C311A98536B00DE284C /* EduRate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C54C4C321A98536B00DE284C /* EduRate.xcdatamodel */,
+			);
+			currentVersion = C54C4C321A98536B00DE284C /* EduRate.xcdatamodel */;
+			path = EduRate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C54C4C1F1A98536B00DE284C /* Project object */;
+}
