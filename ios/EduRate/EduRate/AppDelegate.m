@@ -22,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.isFirstTimeLoaded = NO;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     NSManagedObjectContext *moc = self.managedObjectContext;
     if (self.isFirstTimeLoaded) {
         DataHelper *dataHelper = [[DataHelper alloc] init];

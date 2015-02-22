@@ -37,8 +37,8 @@
     self.lblTitle.text = self.selectedCity.name;
     
     NSArray *allSchoolsForCity = [School getAllSchoolsForCity:self.selectedCity MOC:self.moc];
-    self.rating = [NSMutableArray new
-                              ];
+    self.rating = [NSMutableArray new];
+    
     for (School *school in allSchoolsForCity) {
         NSInteger rate = 0;
         for (Facility *facility in self.selectedCriteria) {
@@ -96,7 +96,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     cell.lblTitle.text = schoolRating.school.name;
-    cell.lblRating.text = [NSString stringWithFormat:@"%@ / 5", schoolRating.rating];
+    cell.lblRating.text = [NSString stringWithFormat:@"%@", schoolRating.rating];
     
     return cell;
 }
