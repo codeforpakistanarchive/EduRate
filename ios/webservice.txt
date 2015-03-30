@@ -1,0 +1,13 @@
+So far there are two tables here. 
+A city table and a school table. 
+You can add cities to the city table and schools to the school table. 
+To add: 
+POST to http://canatan.site90.com/addSchool.php with a single form value schoolName 
+POST to http://canatan.site90.com/addCity.php with a signle form value cityName 
+
+To get: 
+GET to http://canatan.site90.com/getSchool.php with no uid or a uid=someval 
+GET to http://canatan.site90.com/getCity.php with no uid or a uid=someval 
+
+if there is no uid for get methods it returns the entire table. 
+
